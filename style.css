@@ -1,0 +1,77 @@
+/* Reset some default styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body to center the game */
+body {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Main wrapper */
+.game-wrapper {
+  text-align: center;
+  color: white;
+}
+
+/* Title styling */
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Game status display */
+#game-status {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* Board styling */
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: min(90vw, 400px);
+  height: min(90vw, 400px);
+  margin: 20px auto;
+}
+
+/* Each cell */
+.cell {
+  background-color: #222;
+  border: 2px solid #fff;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cell:hover {
+  background-color: #333;
+}
+
+/* Reset button */
+#reset-button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+  background-color: white;
+  color: black;
+}
