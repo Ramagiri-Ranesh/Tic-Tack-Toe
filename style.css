@@ -1,4 +1,4 @@
-/* Reset some default styling */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* Body to center the game */
 body {
   background-color: #000;
   display: flex;
@@ -15,25 +14,21 @@ body {
   height: 100vh;
 }
 
-/* Main wrapper */
 .game-wrapper {
   text-align: center;
   color: white;
 }
 
-/* Title styling */
 .title {
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
-/* Game status display */
 #game-status {
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
-/* Board styling */
 #game-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -43,7 +38,6 @@ body {
   margin: 20px auto;
 }
 
-/* Each cell */
 .cell {
   background-color: #222;
   border: 2px solid #fff;
@@ -53,13 +47,14 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .cell:hover {
   background-color: #333;
 }
 
-/* Reset button */
 #reset-button {
   background-color: black;
   color: white;
