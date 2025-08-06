@@ -1,2 +1,2 @@
 # Tic-Tack-Toe
-Its a Game to Two players
+Its a Game to play between Two players
