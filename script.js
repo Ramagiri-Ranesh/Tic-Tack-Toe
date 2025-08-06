@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetBtn = document.getElementById('reset-button');
   let currentPlayer = 'X';
   let gameOver = false; 
+  let playerX = 0;
+  let playerO = 0;
+  let Tie = 0;
 
   gameContainer.addEventListener('click', handleCellClick);
   resetBtn.addEventListener('click', resetGame);
@@ -24,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const winner = checkWinner(gameBoard);
     if (winner) {
+        if(winner === 'X'){
+            playerX++;
+            document.querySelector('#X').innerText = playerX;
+        }else{
+            playerO++;
+            document.querySelector('#O').innerText = playerX;
+        } 
       statusDisplay.innerText = `Player ${winner} Wins!`;
       gameOver = true;
       return;
@@ -32,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isDraw(gameBoard)) {
       statusDisplay.innerText = "It's a Draw!";
       gameOver = true;
+      Tie++;
+      document.querySelector('#ti').innerText = Tie;
       return;
     }
 
